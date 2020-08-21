@@ -2,35 +2,38 @@ import * as React from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import { withStyles } from "@material-ui/core";
+import createStyles from "@material-ui/core/styles/createStyles";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
 interface Props {
-  classes?: any;
   message: string;
   show: boolean;
   onClose: () => void;
 }
 
-const styles = theme => ({
-  close: {
-    padding: theme.spacing.unit / 2
-  }
-});
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    close: {
+      padding: theme.spacing(0.5),
+    },
+  })
+);
 
-const NotificationComponentInner = (props: Props) => {
-  const { classes, message, show, onClose } = props;
+export const NotificationComponent: React.FC<Props> = (props) => {
+  const classes = useStyles();
+  const { message, show, onClose } = props;
 
   return (
     <Snackbar
       anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "left"
+        vertical: "top",
+        horizontal: "right",
       }}
       open={show}
       autoHideDuration={3000}
       onClose={onClose}
       ContentProps={{
-        "aria-describedby": "message-id"
+        "aria-describedby": "message-id",
       }}
       message={<span id="message-id">{message}</span>}
       action={[
@@ -42,12 +45,8 @@ const NotificationComponentInner = (props: Props) => {
           onClick={onClose}
         >
           <CloseIcon />
-        </IconButton>
+        </IconButton>,
       ]}
     />
   );
 };
-
-export const NotificationComponent = withStyles(styles)(
-  NotificationComponentInner
-);

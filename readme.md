@@ -1,25 +1,28 @@
 # React Typescript by sample
 
+[🇪🇸 Versión Español](./readme_es.md)
+
 The goal of this project is to provide a set of simple samples, providing and step by step guide to
-start working with React and Typescript.
+start working with React and TypeScript.
 
 We have incorporated a set of examples based on hooks.
 
 Right now you got two main folders:
 
 - [Hooks](./hooks): set of samples migrated to hooks (right now 15 samples migrated), if you are new to
-  React, or you are going to start working on a new project, I recommend you going through these
+  React, or you are going to start working on a new project, We recommend you going through these
   examples.
 
 - [Old_class_components_samples](./old_class_components_samples): The old samples, just in case you need to work with older react
   versions or you need to maintain legacy code.
 
-You can check as well other repos (react / redux + typescript):
+If you want to make a deeper dive on React Hooks you can check this repo [React Hooks By Example](https://github.com/Lemoncode/react-hooks-by-example)
 
-- [React By Sample](https://github.com/Lemoncode/react-by-sample)
+Other guided repos available (react / redux + typescript):
+
 - [Redux By Sample](https://github.com/Lemoncode/redux-by-sample)
 - [From React to Redux](https://github.com/Lemoncode/from-react-to-redux-ts)
-- [Redux Testing Typescript](https://github.com/Lemoncode/redux-testing-typescript)
+- [Redux Sagas](https://github.com/Lemoncode/redux-sagas-typescript-by-example)
 
 # Examples
 
@@ -160,7 +163,7 @@ entity passed via props.
 ### 06 Handling asynchronous calls
 
 Members fake api replaced with async call to api github to retrieve list of
-members of a given team.
+members of a given organization.
 
 ### 07 Forms
 
@@ -185,9 +188,11 @@ we will call async operations and fitting them into Redux architecture.
 
 ### 10 SpinnerAsync
 
-Display a busy indicator when an ajax request is in progress.
+Display a busy indicator while an ajax request is in progress.
 
-To have a global count of promises gong on we are using [react-promise-tracker](https://github.com/Lemoncode/react-promise-tracker) and to display a cool spinner [react-spinner](https://github.com/davidhu2000/react-spinners)
+To have a global count of promises gong on we are using
+[react-promise-tracker](https://github.com/Lemoncode/react-promise-tracker)
+and to display a cool spinner [react-spinner](https://github.com/davidhu2000/react-spinners)
 
 ### 11 Testing reducers
 
@@ -227,8 +232,10 @@ Add a login page using Material-UI.
 
 # Contributors
 
-Special thanks to [Jehu Sagardoy](https://github.com/jsagardoy) for his contributions checking
-and getting uptodate examples.
+Thank you very much to the contributors for keeping the project updated in all the examples.
+
+- [Jehu Sagardoy](https://github.com/jsagardoy)
+- [Luis del Amo](https://github.com/delamux)
 
 # About Basefactor + Lemoncode
 
@@ -238,4 +245,5 @@ We are an innovating team of Javascript experts, passionate about turning your i
 
 [Lemoncode](http://lemoncode.net/services/en/#en-home) provides training services.
 
-For the LATAM/Spanish audience we are running an Online Front End Master degree, more info: http://lemoncode.net/master-frontend
+For the LATAM/Spanish audience we are running an Online Front End Master degree,
+more info: [http://lemoncode.net/master-frontend](http://lemoncode.net/master-frontend)
